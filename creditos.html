@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<!-- Separación de Bloque -->
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Equipo 3 - Cr&eacute;ditos</title>
+	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+	<script src="js/stickyheader.js"></script>
+    <script src="js/togglemenu.js"></script>
+    <script src="js/fadeinviewport.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="script" href="script.js">
+</head>
+<!-- Separación de Bloque -->
+<body class="body-padding">
+	<header>
+		<div class="header">
+			<a href="index.html">
+				<div class="logo-wrapper">
+					<img class="logo" src="Logos/Logo_IPN_Original.svg" />
+					<div class="logo-text">
+						<div class="text-wrapper">Equipo 3</div>
+					</div>
+				</div>
+			</a>
+			<nav class="nav">
+				<ul>
+					<li><a href="index.html">Inicio</li>
+					<li><a href="acerca.html">Acerca</li>
+					<li class="dropdown">
+						<a href="actividades.html" class="dropbtn">Actividades<iconify-icon icon="lucide:chevron-up" flip="vertical"></iconify-icon></a>
+						<div class="dropdown-content">
+							<a href="secuencia1.html"><iconify-icon icon="mdi:paintbrush"></iconify-icon>Primer Parcial</a>
+							<a href="secuencia2.html"><iconify-icon icon="mdi:paintbrush"></iconify-icon>Segundo Parcial</a>
+							<a href="secuencia3.html"><iconify-icon icon="mdi:paintbrush"></iconify-icon>Tercer Parcial</a>
+						</div>
+					</li>
+					<li><a href="miembros.html">Miembros</li>
+					<li><a href="mapa.html">Mapa</li>
+					<li><a href="creditos.html">Cr&eacute;ditos</li>
+					<a href=""></a>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="ipn-heading fade-in-bottom">Cr&eacute;ditos</div>
+	<section class="members-wrapper">
+		<div class="ipn-member-wrapper fade-in-bottom">
+			<img src="img/ig.png">
+			<div id="cta-button"><a href="https://www.instagram.com/soyriperg/" target="_blank">Ver más</a></div>
+		</div>
+		<div class="ipn-member-wrapper fade-in-bottom">
+			<img src="img/twitter.png">
+			<div id="cta-button"><a href="https://twitter.com/iRiperG" target="_blank">Ver más</a></div>
+		</div>
+		<div class="ipn-member-wrapper fade-in-bottom">
+			<img src="img/fb.png">
+			<div id="cta-button"><a href="https://www.facebook.com/SoyRiperG" target="_blank">Ver más</a></div>
+			<a href=""></a>
+		</div>
+	</section>
+
+	<div class="web-developer-separator"></div>
+
+</body>
+<!-- Separación de Bloque -->
+<footer>
+	<div class="footer-logo-outer">
+		<div class="footer-logo-wrapper">
+			<img class="logo" src="Logos/Logo_IPN.svg" />
+			<div class="footer-logo-text">Equipo 3</div>
+		</div>
+		<div class="ipn-footer-heading-white">UPIICSA | EST 2024</div>
+	</div>
+	<ul class="social-media-list">
+		<div class="ipn-footer-heading">Redes Sociales</div>
+		<li>
+			<a href="https://www.instagram.com/soyriperg/" target="_blank" class="ipn-footer-text">Instagram</a>
+		</li>
+		<li>
+			<a href="https://www.facebook.com/SoyRiperG" target="_blank" class="ipn-footer-text">Facebook</a>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/channel/UCiSDzjLeW2k7DVafwHgOvcA" target="_blank" class="ipn-footer-text">YouTube</a>
+		</li>
+		<li>
+			<a href="https://twitter.com/iRiperG" target="_blank" class="ipn-footer-text">Twitter</a>
+		</li>
+	</ul>
+	<ul class="social-media-list">
+		<div class="ipn-footer-heading">Recursos</div>
+		<li>
+			<a href="https://drive.google.com/drive/folders/1qPiF1Rnb2tGpJ6i9xXHFWAd5TFBkAxgn?usp=drive_link" target="_blank" class="ipn-footer-text">Resumen</a>
+		</li>
+		<li>
+			<a href="https://drive.google.com/drive/folders/1PClzWJAt928BUwhqUHkdDRSeLrBSSYBl?usp=drive_link" target="_blank" class="ipn-footer-text">Tareas</a>
+		</li>
+		<li>
+			<a href="https://drive.google.com/drive/folders/1ICdtr9qfXhQQkS1BQ-wEzrk_AcL26yDA?usp=drive_link" target="_blank" class="ipn-footer-text">Gu&iacute;as</a>
+		</li>
+	</ul>
+	<ul class="social-media-list">
+		<div class="ipn-footer-heading">Contacto</div>
+		<li>
+			<a href="https://discord.gg/gyWcdmdYcz" target="_blank" class="ipn-footer-text">Discord</a>
+		</li>
+		<li>
+			<a href="https://discord.gg/gyWcdmdYcz" target="_blank" class="ipn-footer-text">Correo</a>
+		</li>
+	</ul>
+</footer>
+<!-- Separación de Bloque -->
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+    }
+    function updateSlider() {
+        const newPosition = -currentIndex * 100 + '%';
+        document.getElementById('slider').style.transform = 'translateX(' + newPosition + ')';
+    }
+    setInterval(nextSlide, 5000);
+</script>
+<!-- Separación de Bloque -->
+</html>
